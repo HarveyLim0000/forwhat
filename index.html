@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lifetime Recorder — 평생 기록</title>
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<div class="lock" id="lockScreen" hidden>
+  <div class="lock__box">
+    <div class="lock__title">잠금 해제</div>
+    <p class="lock__desc">이 기기에 설정된 PIN을 입력하세요.</p>
+    <input type="password" inputmode="numeric" maxlength="8" id="lockInput" class="input" placeholder="PIN">
+    <div class="lock__msg" id="lockMsg"></div>
+    <button class="btn btn--primary btn--block" id="lockSubmit">열기</button>
+  </div>
+</div>
+
+<div class="shell" id="shell">
+
+  <header class="hd">
+    <button class="hd__icon" id="hdBack" aria-label="뒤로" hidden>
+      <svg viewBox="0 0 24 24" class="ic"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <div class="hd__mid">
+      <div class="hd__t" id="hdTitle">오늘</div>
+      <div class="hd__s" id="hdSub"></div>
+    </div>
+    <button class="hd__icon" id="hdAct" aria-label="동작" hidden></button>
+  </header>
+
+  <div class="steps" id="steps" hidden></div>
+
+  <main class="stage" id="stage">
+    <div class="screen" id="screen"></div>
+    <div class="nextbox" id="nextBox" hidden></div>
+  </main>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab" data-tab="today">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18 12h3M16.3 7.7l2.1-2.1M12 18a6 6 0 100-12 6 6 0 000 12zM9 21h6"/></svg>
+      <span>오늘</span>
+    </button>
+    <button class="tab" data-tab="review">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M9 6h11M9 12h11M9 18h11M4 6l1.2 1.2L7.5 5M4 12l1.2 1.2L7.5 11M4 18l1.2 1.2L7.5 17"/></svg>
+      <span>되돌아보기</span>
+    </button>
+    <button class="tab" data-tab="memory">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M4 5.5A1.5 1.5 0 015.5 4H11v16H5.5A1.5 1.5 0 014 18.5v-13zM20 5.5A1.5 1.5 0 0018.5 4H13v16h5.5A1.5 1.5 0 0020 18.5v-13z"/></svg>
+      <span>기억</span>
+    </button>
+    <button class="tab" data-tab="growth">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M12 21v-8M12 13c0-4 2.5-6.5 8-7 0 5-3 8-8 7zM12 15c0-3.5-2-5.5-7-6 0 4.5 2.5 7 7 6z"/></svg>
+      <span>성장</span>
+    </button>
+    <button class="tab" data-tab="me">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M12 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5"/></svg>
+      <span>나</span>
+    </button>
+  </nav>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <div class="modal__head">
+      <h2 class="modal__title" id="modalTitle"></h2>
+      <button class="hd__icon" id="modalClose" aria-label="닫기">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="modal__body" id="modalBody"></div>
+    <div class="modal__foot" id="modalFoot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<input type="file" id="filePick" accept="application/json" hidden>
+<input type="file" id="imgPick" accept="image/*" hidden>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/screens-today.js"></script>
+<script src="assets/js/screens-review.js"></script>
+<script src="assets/js/screens-memory.js"></script>
+<script src="assets/js/screens-growth.js"></script>
+<script src="assets/js/screens-me.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

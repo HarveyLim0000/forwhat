@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+dist/
+.vercel
+.env*.local
+npm-debug.log*
+*.log
+.devlog.txt

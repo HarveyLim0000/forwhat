@@ -1,0 +1,15 @@
+{
+  "name": "Lifetime Recorder — 평생 기록",
+  "short_name": "평생 기록",
+  "description": "자서전 · 개인 기록 · 가족 기록을 한곳에 모으는 생활밀착형 기록 앱",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4F7F3",
+  "theme_color": "#F4F7F3",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

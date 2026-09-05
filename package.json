@@ -1,0 +1,16 @@
+{
+  "name": "lifetime-recorder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "자서전 · 개인 기록 · 가족 기록을 한곳에 모으는 생활밀착형 기록 앱",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
